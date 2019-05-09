@@ -1,0 +1,9 @@
+<p>
+  ANIMALS:
+</p>
+<ul>
+	<li *ngFor="let i of anima " (click)="onSelect(i)">
+		<span>{{i.id}}</span> {{i.name}}
+	</li>
+</ul>
+<app-animal-detail [i]="selectAnimal"></app-animal-detail>
