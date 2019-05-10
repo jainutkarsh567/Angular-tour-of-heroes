@@ -1,0 +1,10 @@
+<p>
+  ANIMALS:
+</p>
+<ul>
+	<li *ngFor="let i of anima ">
+		<a routerLink="/animal-detail/{{i.id}}">
+		<span>{{i.id}}</span> {{i.name}}
+	</a>
+	</li>
+</ul>
