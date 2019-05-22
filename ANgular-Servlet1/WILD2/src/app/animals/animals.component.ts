@@ -9,6 +9,8 @@ import{Animal1Service} from '../animal1.service';
 })
 export class AnimalsComponent implements OnInit {
 	anima :ANIMAL[];
+	users: any[];
+	
   constructor(private animalService: Animal1Service) { }
   
   getAnimals(): void{
@@ -18,4 +20,8 @@ export class AnimalsComponent implements OnInit {
   ngOnInit() {
  this.getAnimals();  }
 
+ onDetail(){
+ console.log(this.users);
+ this.animalService.getDetails().subscribe(users=> {this.users=users;});
+ }
 }

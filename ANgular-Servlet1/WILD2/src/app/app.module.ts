@@ -9,6 +9,10 @@ import { AnimalDetailComponent } from './animal-detail/animal-detail.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import {HttpClientModule} from '@angular/common/http';
+import { map } from 'rxjs/operators';
+import { AddAnimalComponent } from './add-animal/add-animal.component';
+
 
 @NgModule({
   declarations: [
@@ -18,12 +22,14 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
     AnimalDetailComponent,
     HomeComponent,
     LoginComponent,
-    SignupFormComponent
+    SignupFormComponent,
+    AddAnimalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
